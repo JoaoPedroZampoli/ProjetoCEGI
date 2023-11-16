@@ -10,7 +10,7 @@ public class PlayerMoviment : MonoBehaviour
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
-    [SerializaField] private Transform groundCheck;
+    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
     }
-    ]private void FixedUpdate()
+    private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }

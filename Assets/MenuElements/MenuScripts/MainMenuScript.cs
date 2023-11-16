@@ -11,7 +11,7 @@ public class MainMenuScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Application has quit");
+        //Debug.Log("Application has quit");
     }
 
     public AudioSource MySounds;
