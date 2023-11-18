@@ -5,7 +5,7 @@ public class MainMenuScript : MonoBehaviour
 {
    public void GoToScene(string SceneName)
     {
-        SceneManager.LoadScene(SceneName);
+        SceneController.instance.NextLevel();
     }
 
     public void QuitGame()
