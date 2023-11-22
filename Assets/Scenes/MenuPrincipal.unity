@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9910c6de73dd6841b08ca108f57b3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSound: {fileID: 0}
   MySounds: {fileID: 7346216}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
@@ -1414,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9910c6de73dd6841b08ca108f57b3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSound: {fileID: 0}
   MySounds: {fileID: 572669495}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
@@ -2539,6 +2541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9910c6de73dd6841b08ca108f57b3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSound: {fileID: 0}
   MySounds: {fileID: 1608328157}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
@@ -2876,6 +2879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9910c6de73dd6841b08ca108f57b3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSound: {fileID: 1778304485}
   MySounds: {fileID: 0}
   HoverSound: {fileID: 0}
   ClickSound: {fileID: 0}
