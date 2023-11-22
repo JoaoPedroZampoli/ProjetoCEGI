@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
+    [SerializeField] Animator transitionAnim;
     private void Awake()
     {
-        if (instance)       
+        if (!instance)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -19,8 +20,16 @@ public class SceneController : MonoBehaviour
         }
     }
 
+
     public void NextLevel()
     {
+        StartCoroutine(LoadLevel());
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transitionAnim.SetTrigger("IniciarSelecionado");
+        yield return new WaitForSeconds(2);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
