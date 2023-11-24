@@ -6,10 +6,15 @@ public class Moviment : MonoBehaviour
 {
     //Velocidade 
     private float horizontal;
+<<<<<<< HEAD
     private float speed = 8f;
 
     //Pulo
     private float jumpingPower = 16f;
+=======
+    public float speed = 8f;
+    public float jumpingPower = 10f;
+>>>>>>> 89a46d6117316f9ff1f3b8baaabb96f50ed4f11d
     private bool isFacingRight = true;
     public bool InFloor;
     public Transform DetectsGround;
