@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Moviment : MonoBehaviour
 {
+    //Velocidade 
     private float horizontal;
-    public float speed = 8f;
-    public float jumpingPower = 10f;
-    private bool isFacingRight = true;
+    private float speed = 8f;
 
+    //Pulo
+    private float jumpingPower = 16f;
+    private bool isFacingRight = true;
+    public bool InFloor;
+    public Transform DetectsGround;
+    public LayerMask Floor;
+
+    //Moviemntação do player
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    //Animator
+    public Animator animator;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+
+    }
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -20,6 +34,7 @@ public class Moviment : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("Jump", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -28,6 +43,30 @@ public class Moviment : MonoBehaviour
         }
 
         Flip();
+
+
+        InFloor = Physics2D.OverlapCircle(DetectsGround.position, 0.2f, Floor);
+
+        //Animator
+
+        //Run
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+        }
+        //jump
+        if (InFloor &&  rb.velocity.y == 0)
+        {
+            animator.SetBool("Jump", false);
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            animator.SetBool("Jump", true);
+        }
     }
 
     private void FixedUpdate()
