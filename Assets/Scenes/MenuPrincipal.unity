@@ -845,8 +845,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Iniciar Jogo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
-  m_sharedMaterial: {fileID: 8792079301573054911, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
+  m_sharedMaterial: {fileID: -4971296845328401187, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -870,8 +870,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2067,8 +2067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.5592, y: 9.8177}
-  m_SizeDelta: {x: 941.5136, y: 55.3646}
+  m_AnchoredPosition: {x: -13.399398, y: 11.498}
+  m_SizeDelta: {x: 946.5543, y: 122.5749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320502238
 MonoBehaviour:
@@ -2092,8 +2092,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nome do Jogo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
-  m_sharedMaterial: {fileID: 8792079301573054911, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
+  m_sharedMaterial: {fileID: -4971296845328401187, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2117,13 +2117,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 92
+  m_fontSizeBase: 92
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2304,8 +2304,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sair do Jogo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
-  m_sharedMaterial: {fileID: 8792079301573054911, guid: ab5d8faddbb36c94083c73dcaa9b9bbc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
+  m_sharedMaterial: {fileID: -4971296845328401187, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2329,8 +2329,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
