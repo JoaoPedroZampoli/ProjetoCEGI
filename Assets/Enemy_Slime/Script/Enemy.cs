@@ -42,11 +42,6 @@ public class Enemy : MonoBehaviour
         }
 
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.2f, LayerMask.GetMask("Ground"));
-
-        if (isGrounded )
-        {
-            Jump();
-        }
     }
     void Flip()
     {
@@ -54,10 +49,5 @@ public class Enemy : MonoBehaviour
         Vector3 Scale = transform.localScale;
         Scale.x *= -1;
         transform.localScale = Scale;
-    }
-    void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, 0f); // Zera a velocidade vertical para evitar saltos consecutivos muito altos.
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
