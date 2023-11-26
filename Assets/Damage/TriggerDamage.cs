@@ -11,6 +11,15 @@ public class TriggerDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            player.kBCount = player.kBTime;
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                player.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                player.isKnockRight = false;
+            }
             heart.health--;
             player.animator.SetTrigger("TakeDamage");
         }

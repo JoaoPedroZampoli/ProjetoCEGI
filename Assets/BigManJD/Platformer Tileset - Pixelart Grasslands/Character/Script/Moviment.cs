@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Moviment : MonoBehaviour
 {
+    //teste
+    Moviment player;
     //Velocidade 
     private float horizontal;
     public float speed = 8f;
@@ -22,6 +24,12 @@ public class Moviment : MonoBehaviour
 
     //Animator
     public Animator animator;
+
+    //Afastamento apos dano
+    public float kBForce;
+    public float kBCount;
+    public float kBTime;
+    public bool isKnockRight;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -67,13 +75,39 @@ public class Moviment : MonoBehaviour
         {
             animator.SetBool("Jump", true);
         }
+        GetInputMove();
+        KnockLogic();
     }
-
-    private void FixedUpdate()
+    void MoveLogic()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
-
+    void GetInputMove()
+    {
+        horizontal = Input.GetAxisRaw("Horizontal");
+    }
+    private void FixedUpdate()
+    {
+        MoveLogic();
+    }
+    void KnockLogic()
+    {
+        if(kBCount < 0)
+        {
+            MoveLogic();
+        }
+        else
+        {
+            if (isKnockRight == true) { 
+                rb.velocity = new Vector2(-kBForce, kBForce);
+            }
+            if (isKnockRight == false)
+            {
+                rb.velocity = new Vector2(kBForce, kBForce);
+            }
+        }
+        kBCount -= Time.deltaTime;
+    }
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
