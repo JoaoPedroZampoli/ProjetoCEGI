@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Moviment : MonoBehaviour
 {
-    //teste
-    Moviment player;
     //Velocidade 
     private float horizontal;
     public float speed = 8f;
