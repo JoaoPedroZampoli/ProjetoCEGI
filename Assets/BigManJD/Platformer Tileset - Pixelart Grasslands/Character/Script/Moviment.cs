@@ -97,16 +97,14 @@ public class Moviment : MonoBehaviour
     }
     void KnockLogic()
     {
-        if(kBCount < 0)
+        MoveLogic();
+        if (kBCount >= 0)
         {
-            MoveLogic();
-        }
-        else
-        {
-            if (isKnockRight == true) { 
+            if (isKnockRight == true) 
+            { 
                 rb.velocity = new Vector2(-kBForce, kBForce);
             }
-            if (isKnockRight == false)
+            else
             {
                 rb.velocity = new Vector2(kBForce, kBForce);
             }
