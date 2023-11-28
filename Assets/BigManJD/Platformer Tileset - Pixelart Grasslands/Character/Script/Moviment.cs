@@ -60,19 +60,26 @@ public class Moviment : MonoBehaviour
         {
             animator.SetBool("Run", true);
         }
-        else
+        if(Input.GetAxisRaw("Horizontal") == 0)
         {
             animator.SetBool("Run", false);
         }
+
         //jump
         if (InFloor &&  rb.velocity.y == 0)
         {
             animator.SetBool("Jump", false);
         }
+
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("Jump", true);
         }
+        if (Input.GetButtonUp("Jump"))
+        {
+            animator.SetBool("Jump", false);
+        }
+
         GetInputMove();
         KnockLogic();
     }
