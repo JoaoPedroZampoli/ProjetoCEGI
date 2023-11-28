@@ -1,35 +1,44 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DeathMenuScript : MonoBehaviour
 {
-    public static DeathMenuScript instance;
-    [SerializeField] Animator transitionAnim;
-    private void Awake()
+    public AudioSource MainSound;
+    public AudioSource MySounds;
+    public AudioClip HoverSound;
+    public AudioClip ClickSound;
+    public void GoToScene(string SceneName)
     {
-        if (!instance)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        StartCoroutine(FadeOut(MainSound, 1f));
+        DeathController.DeathInstance.NextLevel();
     }
 
-
-    public void NextLevel()
+    public void QuitGame()
     {
-        StartCoroutine(LoadLevel());
+        Application.Quit();
+        //Debug.Log("Application has quit");
     }
 
-    IEnumerator LoadLevel()
+    public void OnHoverSound()
     {
-        transitionAnim.SetTrigger("IniciarSelecionado");
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        MySounds.PlayOneShot(HoverSound);
+    }
+    public void OnClickSound()
+    {
+        MySounds.PlayOneShot(ClickSound);
+    }
+
+    public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            yield return null;
+        }
+
+        audioSource.Stop();
     }
 }
