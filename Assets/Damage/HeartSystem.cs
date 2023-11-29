@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class HeartSystem : MonoBehaviour
 {
@@ -56,12 +57,20 @@ public class HeartSystem : MonoBehaviour
     }
     void DeadState()
     {
-        if (health <= 0)
+        if (health <= 0 && !IsDead)
         {
             IsDead = true;
             player.animator.SetBool("IsDead", IsDead);
             GetComponent<Moviment>().enabled = false;
-            Destroy(gameObject, 1.0f);
+            StartCoroutine(LoadSceneAfterDeath());
         }
     }
+
+
+    IEnumerator LoadSceneAfterDeath()
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }

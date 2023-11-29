@@ -938,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &493476356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2124,7 +2124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nome do Jogo
+  m_text: Gato, o Jogo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
   m_sharedMaterial: {fileID: -4971296845328401187, guid: e58cdc61733030e49a26441eb72c5588, type: 2}
