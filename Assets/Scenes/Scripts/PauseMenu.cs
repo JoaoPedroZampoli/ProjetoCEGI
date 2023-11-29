@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
+    private int SceneNumber;
 
     // Update is called once per frame
     public void PauseGame()
@@ -15,6 +17,11 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         Resume();
+    }
+
+    public void QuitGame()
+    {
+        
     }
 
     void Update()
