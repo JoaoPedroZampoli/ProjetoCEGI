@@ -5,31 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class DeathController : MonoBehaviour
 {
-    public static DeathController DeathInstance;
-    [SerializeField] Animator transitionAnim;
-    private void Awake()
+    public Animator Transition;
+    public float TransitionTime = 1f;
+    void Update()
     {
-        if (!DeathInstance)
+        if (Input.GetMouseButtonDown(0))
         {
-            DeathInstance = this;
-            DontDestroyOnLoad(gameObject);
+            ReloadLevel();
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        /*
+         *if(Input.GetMouseButtonDown(0))
+         *{
+         *  QuitGameSelected();
+         *}
+         */
     }
 
-
-    public void NextLevel()
+    public void ReloadLevel()
     {
-        StartCoroutine(LoadLevel());
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+    IEnumerator LoadLevel(int LevelIndex)
+    {
+        Transition.SetTrigger("IniciarTransicao");
+        yield return new WaitForSeconds(TransitionTime);
+        SceneManager.LoadScene(LevelIndex);
     }
 
-    IEnumerator LoadLevel()
+    public void QuitGameSelected()
     {
-        transitionAnim.SetTrigger("RenascerSelecionado");
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
+        StartCoroutine(QuitGame(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+    IEnumerator QuitGame(int LevelIndex)
+    {
+        Transition.SetTrigger("IniciarTransicao");
+        yield return new WaitForSeconds(TransitionTime);
+        SceneManager.LoadScene(LevelIndex);
     }
 }
