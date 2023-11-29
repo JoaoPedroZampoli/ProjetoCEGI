@@ -7,12 +7,18 @@ public class DeathController : MonoBehaviour
 {
     public Animator Transition;
     public float TransitionTime = 1f;
+
+    public void Restart()
+    {
+        ReloadLevel();
+    }
+
+    public void ExitGame()
+    {
+        QuitGameSelected();
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ReloadLevel();
-        }
         /*
          *if(Input.GetMouseButtonDown(0))
          *{
@@ -34,7 +40,7 @@ public class DeathController : MonoBehaviour
 
     public void QuitGameSelected()
     {
-        StartCoroutine(QuitGame(SceneManager.GetActiveScene().buildIndex - 1));
+        StartCoroutine(QuitGame(SceneManager.GetActiveScene().buildIndex - 2));
     }
     IEnumerator QuitGame(int LevelIndex)
     {
