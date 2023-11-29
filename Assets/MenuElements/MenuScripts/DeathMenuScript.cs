@@ -8,17 +8,6 @@ public class DeathMenuScript : MonoBehaviour
     public AudioSource MySounds;
     public AudioClip HoverSound;
     public AudioClip ClickSound;
-    public void GoToScene(string SceneName)
-    {
-        StartCoroutine(FadeOut(MainSound, 1f));
-        DeathController.DeathInstance.NextLevel();
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-        //Debug.Log("Application has quit");
-    }
 
     public void OnHoverSound()
     {
