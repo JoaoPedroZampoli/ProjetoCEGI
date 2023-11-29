@@ -50,4 +50,15 @@ public class Enemy : MonoBehaviour
         Scale.x *= -1;
         transform.localScale = Scale;
     }
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            collision.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            collision.gameObject.GetComponent<Moviment>().enabled = false;
+            collision.gameObject.GetComponent<Animator>().SetBool("Jump", false);
+        }
+    }*/
 }
