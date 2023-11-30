@@ -9,16 +9,18 @@ public class SceneController : MonoBehaviour
     [SerializeField] Animator transitionAnim;
     private void Awake()
     {
-        if (!instance)
+        if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // This will now also preserve the Animator
         }
-        else
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
     }
+
+
 
 
     public void NextLevel()
