@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - TransitionAnimator
+  - Catnip
   layers:
   - Default
   - TransparentFX

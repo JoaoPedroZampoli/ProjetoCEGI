@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Catnip_colect : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class Catnip_colect : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-
+            LoadScene();
         }
+    }
+    void LoadScene()
+    {
+        SceneManager.LoadScene("VictoryScene");
     }
 }
