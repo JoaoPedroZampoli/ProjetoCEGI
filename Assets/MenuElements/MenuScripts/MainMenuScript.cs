@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class MainMenuScript : MonoBehaviour
 
     public void QuitGame()
     {
+        //Debug.Log("BotaoSair");
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         //Debug.Log("Application has quit");
     }
@@ -27,6 +30,10 @@ public class MainMenuScript : MonoBehaviour
     public void OnClickSound()
     {
         MySounds.PlayOneShot(ClickSound);
+    }
+    public void MenuScene()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
