@@ -18,7 +18,7 @@ public class MainMenuScript : MonoBehaviour
     public void QuitGame()
     {
         //Debug.Log("BotaoSair");
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         //Debug.Log("Application has quit");
     }
