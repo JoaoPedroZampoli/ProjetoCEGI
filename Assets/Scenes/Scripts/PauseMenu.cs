@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool IsConfirmMenuOpen = false;
     public GameObject PauseMenuUI;
+    public GameObject ConfirmPanelUI;
     private int SceneNumber;
 
     // Update is called once per frame
@@ -19,23 +21,41 @@ public class PauseMenu : MonoBehaviour
         Resume();
     }
 
+    public void ConfirmMenu()
+    {
+        OpenConfirmMenu();
+    }
+
     public void QuitGame()
     {
-        
+        Application.Quit();
+    }
+    
+    public void CancelQuitGame()
+    {
+        DoNotQuit();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (IsConfirmMenuOpen)
             {
-                Resume();
+                DoNotQuit();
             }
             else
             {
-                Pause();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
+            
         }
     }
 
@@ -51,5 +71,19 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+    
+    void OpenConfirmMenu()
+    {
+        PauseMenuUI.SetActive(false);
+        ConfirmPanelUI.SetActive(true);
+        IsConfirmMenuOpen = true;
+    }
+
+    void DoNotQuit()
+    {
+        PauseMenuUI.SetActive(true);
+        ConfirmPanelUI.SetActive(false);
+        IsConfirmMenuOpen = false;
     }
 }
