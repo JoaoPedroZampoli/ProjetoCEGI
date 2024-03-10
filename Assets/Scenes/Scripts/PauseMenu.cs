@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ConfirmPanelUI;
     private int SceneNumber;
 
-    // Update is called once per frame
+
     public void PauseGame()
     {
         Pause();
@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         DoNotQuit();
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
