@@ -450,6 +450,9 @@ MonoBehaviour:
   MySounds: {fileID: 7346216}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!114 &7346218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f9ebc44979f37fe48a5a922c7b295bd8, type: 3}
     - target: {fileID: 45194594186721280, guid: fdf2105f372757447b10646033541470, type: 3}
       propertyPath: m_Name
-      value: SettingsButton
+      value: SoundButton
       objectReference: {fileID: 0}
     - target: {fileID: 45194594186721281, guid: fdf2105f372757447b10646033541470, type: 3}
       propertyPath: m_Pivot.x
@@ -961,15 +964,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1769395745}
+    - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MuteMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 45194594186721282, guid: fdf2105f372757447b10646033541470, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf2105f372757447b10646033541470, type: 3}
@@ -1893,6 +1912,9 @@ MonoBehaviour:
   MySounds: {fileID: 289169202}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!82 &289169202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3242,7 +3264,7 @@ MonoBehaviour:
   WhichMenuIsOpen: 
   SettingsMenu: {fileID: 1718239928}
   ButtonsMenu: {fileID: 212180907}
-  CreditsMenu: {fileID: 411822275}
+  CreditsMenu: {fileID: 858459223}
 --- !u!1 &553188632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,6 +3725,9 @@ MonoBehaviour:
   MySounds: {fileID: 572669495}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!114 &572669497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5103,6 +5128,9 @@ MonoBehaviour:
   MySounds: {fileID: 879988803}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!114 &879988805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5273,6 +5301,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887795438}
   m_CullTransparentMesh: 1
+--- !u!114 &892979805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 45194593830381916, guid: fdf2105f372757447b10646033541470, type: 3}
+  m_PrefabInstance: {fileID: 91826021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &894183639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6512,6 +6551,9 @@ MonoBehaviour:
   MySounds: {fileID: 1178501461}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!82 &1178501461
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8964,6 +9006,9 @@ MonoBehaviour:
   MySounds: {fileID: 1608328157}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  SoundButton: {fileID: 892979805}
+  Sprite1: {fileID: 21300000, guid: 8696ba2df0ed4df4598861f61a936a80, type: 3}
+  Sprite2: {fileID: 21300000, guid: f9ebc44979f37fe48a5a922c7b295bd8, type: 3}
 --- !u!82 &1608328157
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9600,6 +9645,9 @@ MonoBehaviour:
   MySounds: {fileID: 1742841578}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!82 &1742841578
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9985,6 +10033,9 @@ MonoBehaviour:
   MySounds: {fileID: 0}
   HoverSound: {fileID: 0}
   ClickSound: {fileID: 0}
+  SoundButton: {fileID: 892979805}
+  Sprite1: {fileID: 21300000, guid: 8696ba2df0ed4df4598861f61a936a80, type: 3}
+  Sprite2: {fileID: 21300000, guid: f9ebc44979f37fe48a5a922c7b295bd8, type: 3}
 --- !u!1 &1778304484
 GameObject:
   m_ObjectHideFlags: 0
@@ -10654,6 +10705,9 @@ MonoBehaviour:
   MySounds: {fileID: 1894096256}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!82 &1894096256
 AudioSource:
   m_ObjectHideFlags: 0
