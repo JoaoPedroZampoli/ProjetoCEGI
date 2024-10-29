@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 31563753}
   - component: {fileID: 31563752}
   - component: {fileID: 31563751}
+  - component: {fileID: 31563757}
   m_Layer: 5
   m_Name: BotaoSair
   m_TagString: Untagged
@@ -186,7 +187,23 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 31563753}
           m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-          m_MethodName: QuitGame
+          m_MethodName: OnClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 31563753}
+          m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+          m_MethodName: OnHoverSound
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -307,7 +324,10 @@ MonoBehaviour:
   MainSound: {fileID: 0}
   MySounds: {fileID: 31563752}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
-  ClickSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  ClickSound: {fileID: 8300000, guid: 79e6baad2fd414b82a6d49ce1568d2e5, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!114 &31563754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +422,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31563748}
   m_CullTransparentMesh: 1
+--- !u!114 &31563757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31563748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 31563753}
+          m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+          m_MethodName: QuitGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &178239463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1797,22 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 995536064}
           m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+          m_MethodName: OnHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 995536064}
+          m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
           m_MethodName: OnClickSound
           m_Mode: 1
           m_Arguments:
@@ -1773,7 +1838,10 @@ MonoBehaviour:
   MainSound: {fileID: 0}
   MySounds: {fileID: 995536065}
   HoverSound: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
-  ClickSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  ClickSound: {fileID: 8300000, guid: a0ca8964c08d54c5dbebf245bdc474ca, type: 3}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!82 &995536065
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2069,6 +2137,9 @@ MonoBehaviour:
   MySounds: {fileID: 0}
   HoverSound: {fileID: 0}
   ClickSound: {fileID: 0}
+  SoundButton: {fileID: 0}
+  Sprite1: {fileID: 0}
+  Sprite2: {fileID: 0}
 --- !u!114 &1207508569
 MonoBehaviour:
   m_ObjectHideFlags: 0
